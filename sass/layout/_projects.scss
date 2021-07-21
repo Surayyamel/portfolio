@@ -1,0 +1,207 @@
+@mixin sub-section-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: rgb(179, 159, 159);
+}
+
+@mixin info-text {
+    font-size: 1.3rem;
+    line-height: 2.3rem;
+    font-weight: 350;
+}
+
+
+.section-projects-title {
+    font-size: 4rem;
+    margin: 8rem 2rem 7rem 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: rgb(179, 159, 159);
+}
+
+.project-one-container {
+   display: flex;
+   margin-bottom: 5rem;
+}
+
+.project-one-title {
+    font-size: 3rem;
+    margin: 5rem 2rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: rgb(179, 159, 159);
+}
+
+.figure-list {
+    display: flex;
+}
+
+.tech-figure {
+    margin: 2rem;
+}
+
+.project-one {
+    &__images-container {
+       max-width: 50%;
+       display: flex;
+       flex-wrap: wrap;
+       
+    }
+    &__image1 {
+        width: 93%;
+        box-shadow: 0 .5rem 1rem rgba(black, .2);
+        margin: 1rem;
+    }
+    &__image2 {
+        width: 45%;
+        box-shadow: 0 .5rem 1rem rgba(black, .2);
+        margin: 1rem;
+    }
+    &__image3 {
+        width: 45%;
+        box-shadow: 0 .5rem 1rem rgba(black, .2);
+        margin: 1rem;
+    }
+
+    &__info-container {
+       padding: 2rem 2rem;
+    }
+
+    &__links-container {
+        margin-top: 3rem;
+    }
+
+    &__tech-title {
+       @include sub-section-title;
+    }
+
+    &__tech-list {
+        list-style-type: none;
+        display: flex;
+       
+    }
+
+    &__tech-element {
+        font-size: 1.3rem;
+        margin-right: 1rem;
+        
+    }
+
+    &__about-title {
+        @include sub-section-title;
+    }
+
+    &__about-text {
+        @include info-text;
+    }
+
+    &__functions-title {
+        @include sub-section-title;
+    }
+
+    &__functions-text {
+        @include info-text;
+    }
+
+    &__link-text {
+        @include info-text;
+        font-weight: bold;
+    }
+
+    &__heroku-link, &__github-link {
+       @include small-link;
+    }
+}
+
+
+/////////// ICONS ///////////
+@mixin icon-format {
+    height: 5rem;
+   
+}
+
+.react-icon {
+   @include icon-format;
+}
+
+.sass-icon {
+    @include icon-format;
+}
+
+.node-icon {
+    @include icon-format;
+} 
+
+.pg-icon {
+    @include icon-format;
+}
+
+/////////// EXPAND / COLLAPSE SECTION //////////
+
+.collapse {
+    background-color: $base-color;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    
+}
+
+.active, .collapse:hover {
+    background-color: #f7ece7;
+}
+
+.collapse-content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+}
+
+.collapse::after {
+    content: '\02795';
+    float: right;
+   
+}
+
+.active::after {
+    content: "\2796";
+    float: right;
+}
+
+//////////// CASE STUDY TABLE ///////////
+
+.study-table {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    margin: 2rem;
+    transform: translate(-50%, 0%);
+    border: 1px solid black;
+    border-collapse: collapse;
+
+    &__head {
+        font-size: 2rem;
+        padding: 1rem;
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    &__data {
+        padding: 1rem;
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+}
