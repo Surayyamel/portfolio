@@ -111,16 +111,24 @@
                             <th class="study-table__head">Solutions</th>
                         </tr>
                         <tr class="study-table__row">
-                            <td class="study-table__data">Implementing dynamic form fields that rely on user inputs while keeping the collected data structured </td>
-                            <td class="study-table__data">I got stuck lol </td>
+                            <td class="study-table__data">A <b>dynamic form</b> dependant on user input</td>
+                            <td class="study-table__data">Opted for using npm package 'react-hook-form', simplifying the dynamic aspect. </td>
                         </tr>
                         <tr class="study-table__row">
-                            <td class="study-table__data">Designing the database while ensuring a link between the relevant users, dates, sets, reps and weights</td>
-                            <td class="study-table__data">I got stuck lol </td>
+                            <td class="study-table__data"><b>Storing</b> and <b>retrieving</b> the data (reps, weights) in the correct matching order</td>
+                            <td class="study-table__data">Assigned a specific index to each weight and rep names and ensured that the data gets inserted into DB in the correct order, so that it could be retrieved in order.</td>
                         </tr>
                         <tr class="study-table__row">
-                            <td class="study-table__data">Unexpected behavior after hosting the project on heroku</td>
-                            <td class="study-table__data">I got stuck lol </td>
+                            <td class="study-table__data">Designing the <b>database</b> to ensure a link between the relevant users, dates, sets, reps and weights</td>
+                            <td class="study-table__data">Linked reps and weights to exercise using an exercise ID. Linked exercises and workout names to users using a user ID. Exercise and workout names also keep track of their selected date.</td>
+                        </tr>
+                        <tr class="study-table__row">
+                            <td class="study-table__data"><b>Hosting</b> on Heroku: OAuth log-in not working on hosted site</td>
+                            <td class="study-table__data">Was not able to freely exchange cookies between seperately hosted front-end and back-end. Added SameSite=None and Secure settings to cookie at creation.</td>
+                        </tr>
+                        <tr class="study-table__row">
+                            <td class="study-table__data"><b>Hosting</b> on Heroku: Database pooling not supported</td>
+                            <td class="study-table__data">Initially used pooling to handle database requests, but this was not supported by Heroku. Changed to connect and end connection on each CRUD route.</td>
                         </tr>
                     </table>
 
@@ -146,9 +154,18 @@
     <!-- Section About -->
 
     <section class="about fade-in slide-in from-bottom" id="about">
-        <div class="about-container">
-            <h1 class="about-title">About me</h1>
-            <p class="about-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sint corrupti pariatur quo vel, veritatis sapiente, eveniet delectus neque dolore voluptatum natus dolor consequuntur inventore quia eligendi ratione aspernatur vitae.</p>
+        <div class="about__container">
+            <h1 class="about__title">About me</h1>
+            <p class="about__text">My name is Surayya. Originally from England, I grew up and studied in the South of France. Emigrating at a young age really sparked my interest in travelling and learning languages. I graduated school with a Baccalauréat (A Levels equivalent) in Languages and Litterature. I went on to study Applied Languages at University where I had in depth French, English and German language and translation studies, applied to Business and specialised in International Commerce.
+                I then took some time out and moved back to England, still deciding on whether to persue a Master's in International Commerce. 
+                I took up a job in retail, thinking about my next steps.
+                <br />
+                This is when I discovered Web Development. I was hooked from the very first lines of code I wrote on FreeCodeCamp and after over a year of self-learning, I am even more passionate about it!
+                <br />
+                I find that coding incorporates everything I enjoy about learning languages, while also being creative, facing challenges, endless learning, 
+                <br />
+                I find problem solving exciting, and I am thrilled to keep learning new things! 
+            </p>
 
         </div>
         
@@ -170,9 +187,9 @@
                 <div class="contact-online">
                     <h3 class="contact__sub-title">Find me online</h3>
                     <ul class="contact__list">
-                        <li class="contact__element"><img src="/images/linkedin.png" alt="LinkedIn Logo" class="contact-icon">LinkedIn</li>
-                        <li class="contact__element"><img src="/images/github.png" alt="GitHub Logo" class="contact-icon">GitHub</li>
-                        <li class="contact__element"><img src="/images/twitter.png" alt="Twitter Logo" class="contact-icon">Twitter</li>
+                        <li class="contact__element"><a href="https://www.google.com" target="_blank"><img src="/images/linkedin.png" alt="LinkedIn Logo" class="contact-icon"></a><a href="https://www.google.com" target="_blank" class="contact__link">LinkedIn</a></li>
+                        <li class="contact__element"><a href="https://github.com/Surayyamel" target="_blank"><img src="/images/github.png" alt="GitHub Logo" class="contact-icon"></a><a href="https://github.com/Surayyamel" target="_blank" class="contact__link">GitHub</a></li>
+                        <li class="contact__element"><a href="https://twitter.com/SurayyaFenton" target="_blank"><img src="/images/twitter.png" alt="Twitter Logo" class="contact-icon"></a><a href="https://twitter.com/SurayyaFenton" target="_blank" class="contact__link">Twitter</a></li>
                     </ul>
                 </div>
                 

@@ -1,11 +1,3 @@
-@mixin sub-section-title {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    margin-top: 3rem;
-    text-transform: uppercase;
-    font-weight: 300;
-    color: rgb(179, 159, 159);
-}
 
 @mixin info-text {
     font-size: 1.3rem;
@@ -154,20 +146,22 @@
     font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
-    
+    @include sub-section-title;
+    margin: 0;
 }
 
 .active, .collapse:hover {
-    background-color: #f7ece7;
+    background-color: #f5efec;
 }
 
 .collapse-content {
     padding: 0 18px;
     display: none;
     overflow: hidden;
-    background-color: #f1f1f1;
+    background-color: #f8f6f6;
     max-height: 0;
     transition: max-height 0.2s ease-out;
+    @include info-text;
 }
 
 .collapse::after {
@@ -197,6 +191,7 @@
         padding: 1rem;
         border: 1px solid black;
         border-collapse: collapse;
+        @include sub-section-title;
     }
 
     &__data {

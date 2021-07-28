@@ -17,6 +17,7 @@ html {
 body {
     box-sizing: border-box;
     margin: 3rem;
+    color:rgb(71, 68, 68);
 }
 
 /////// animations //////// 
@@ -67,4 +68,14 @@ body {
         transform: translateY(0px);
     }
     
+}
+
+
+@mixin sub-section-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: rgb(179, 159, 159);
 }

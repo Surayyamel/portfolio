@@ -9,7 +9,8 @@ html {
 
 body {
   box-sizing: border-box;
-  margin: 3rem; }
+  margin: 3rem;
+  color: #474444; }
 
 .fade-in {
   opacity: 0;
@@ -250,18 +251,28 @@ body {
   outline: none;
   font-size: 1.5rem;
   font-weight: bold;
-  text-align: center; }
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #b39f9f;
+  margin: 0; }
 
 .active, .collapse:hover {
-  background-color: #f7ece7; }
+  background-color: #f5efec; }
 
 .collapse-content {
   padding: 0 18px;
   display: none;
   overflow: hidden;
-  background-color: #f1f1f1;
+  background-color: #f8f6f6;
   max-height: 0;
-  transition: max-height 0.2s ease-out; }
+  transition: max-height 0.2s ease-out;
+  font-size: 1.3rem;
+  line-height: 2.3rem;
+  font-weight: 350; }
 
 .collapse::after {
   content: '\02795';
@@ -283,7 +294,13 @@ body {
     font-size: 2rem;
     padding: 1rem;
     border: 1px solid black;
-    border-collapse: collapse; }
+    border-collapse: collapse;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #b39f9f; }
   .study-table__data {
     padding: 1rem;
     border: 1px solid black;
@@ -293,7 +310,7 @@ body {
   background-color: #fdf6f2;
   padding-bottom: 4rem; }
 
-.about-title {
+.about__title {
   font-size: 4rem;
   margin: 8rem 2rem 7rem 2rem;
   padding-top: 2rem;
@@ -301,6 +318,12 @@ body {
   text-transform: uppercase;
   font-weight: 300;
   color: #b39f9f; }
+
+.about__text {
+  font-size: 1.3rem;
+  line-height: 2.3rem;
+  font-weight: 350;
+  padding: 0rem 5rem; }
 
 .contact-container {
   border: 1px solid #b39f9f;
@@ -322,10 +345,32 @@ body {
   .contact__sub-title {
     font-size: 2.5rem;
     margin-bottom: 2rem;
-    margin-top: 1rem; }
+    margin-top: 1rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #b39f9f; }
   .contact__list {
     list-style: none;
     font-size: 2rem; }
+  .contact__link:link, .contact__link:visited {
+    text-decoration: none;
+    color: #b39f9f;
+    border-bottom: 1.5px solid #ccb2b2;
+    display: inline-block;
+    padding: .2rem .3rem;
+    margin: .1rem;
+    transition: all .2s; }
+  .contact__link:hover {
+    background-color: #b39f9f;
+    color: white;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px); }
+  .contact__link:active {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    transform: translateY(0px); }
 
 .contact-icon {
   height: 3rem;

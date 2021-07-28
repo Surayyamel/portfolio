@@ -22,12 +22,18 @@
     &__sub-title {
         font-size: 2.5rem;
         margin-bottom: 2rem;
-        margin-top: 1rem 
+        margin-top: 1rem; 
+        @include sub-section-title;
     }
 
     &__list {
         list-style: none;
         font-size: 2rem;
+        
+    }
+    
+    &__link {
+        @include small-link;
     }
 
 }
