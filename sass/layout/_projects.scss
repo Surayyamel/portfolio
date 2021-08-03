@@ -13,28 +13,66 @@
     text-transform: uppercase;
     font-weight: 300;
     color: rgb(179, 159, 159);
+   
 }
 
-.project-one-container {
-   display: flex;
-   margin-bottom: 5rem;
+
+.project {
+    &__title {
+        font-size: 3rem;
+        margin: 5rem 2rem;
+        text-transform: uppercase;
+        font-weight: 300;
+        color: rgb(179, 159, 159);
+    }
+
+    &__container {
+        display: flex;
+        margin-bottom: 5rem;
+    }
+
+
+    &__sub-title {
+        @include sub-section-title;
+    }
+
+    &__about {
+        &--container {
+
+        }
+        
+        &--text {
+            @include info-text;
+        }
+    }
+
+    &__info-container {
+        padding: 2rem 2rem;
+    }
+
+    &__tech-figure {
+        margin: 2rem;
+    }
+
+    &__figure-list {
+        display: flex;
+    }
+
+    &__links {
+        &--container {
+            margin-top: 3rem;
+        }
+        &--text {
+            @include info-text;
+            font-weight: bold;
+        }
+
+        &--heroku-link, &--github-link {
+            @include small-link;
+         }
+    }
 }
 
-.project-one-title {
-    font-size: 3rem;
-    margin: 5rem 2rem;
-    text-transform: uppercase;
-    font-weight: 300;
-    color: rgb(179, 159, 159);
-}
-
-.figure-list {
-    display: flex;
-}
-
-.tech-figure {
-    margin: 2rem;
-}
 
 .project-one {
     &__images-container {
@@ -59,55 +97,81 @@
         margin: 1rem;
     }
 
-    &__info-container {
-       padding: 2rem 2rem;
-    }
+    
+    
+}
 
-    &__links-container {
-        margin-top: 3rem;
-    }
-
-    &__tech-title {
-       @include sub-section-title;
-    }
-
-    &__tech-list {
-        list-style-type: none;
+.project-two {
+    &__images-container {
         display: flex;
-       
+        max-width: 50%;
     }
 
-    &__tech-element {
-        font-size: 1.3rem;
-        margin-right: 1rem;
-        
+    &__image1, &__image2 {
+        width: 50%; 
     }
 
-    &__about-title {
-        @include sub-section-title;
+}
+
+.project-three {
+    &__images-container {
+        max-width: 50%;
     }
 
-    &__about-text {
-        @include info-text;
-    }
-
-    &__functions-title {
-        @include sub-section-title;
-    }
-
-    &__functions-text {
-        @include info-text;
-    }
-
-    &__link-text {
-        @include info-text;
-        font-weight: bold;
-    }
-
-    &__heroku-link, &__github-link {
-       @include small-link;
+    &__image1 {
+        width: 100%;
     }
 }
+
+/////////// MINI PROJECTS //////////
+
+.mini-projects {
+    &__card {
+        border: 1px solid rgb(243, 227, 227);
+        width: 80%;
+        display: flex;
+        padding: 1rem;
+        box-shadow: 0 .5rem 1rem rgba(rgb(201, 195, 195), .2);
+        margin-bottom: 2rem;
+
+        &:hover {
+            cursor: pointer;
+            transform: translateY(-1rem);
+            transition: .2s;
+        }
+    }
+
+    &__image-container {
+       width: 15rem;
+       height: 15rem;
+    }
+
+    &__image {
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+    &__link, &__link:visited {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    &__about-container {
+        padding: 0 2rem;
+    }
+
+    &__title {
+        @include sub-section-title;
+        margin-top: 1rem;
+    }
+
+    &__text {
+        @include info-text;
+    }
+}
+
+
+
 
 
 /////////// ICONS ///////////
@@ -116,20 +180,8 @@
    
 }
 
-.react-icon {
+.react-icon, .sass-icon, .node-icon, .pg-icon {
    @include icon-format;
-}
-
-.sass-icon {
-    @include icon-format;
-}
-
-.node-icon {
-    @include icon-format;
-} 
-
-.pg-icon {
-    @include icon-format;
 }
 
 /////////// EXPAND / COLLAPSE SECTION //////////
