@@ -88,6 +88,18 @@ body {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     transform: translateY(0px); }
 
+.nav-bar-fixed {
+  position: fixed;
+  height: 100px;
+  width: 100vw;
+  left: 0;
+  z-index: 1;
+  top: -5%;
+  background-color: white; }
+
+.nav-bar__link-fixed:link, .nav-bar__link-fixed:visited {
+  border-bottom: 0px solid white; }
+
 .photo-shape {
   position: absolute;
   width: 20rem;
@@ -253,6 +265,30 @@ body {
   line-height: 2.3rem;
   font-weight: 350; }
 
+.mini-projects__codepen-container {
+  margin-top: 3rem; }
+
+.mini-projects__codepen-logo {
+  height: 32px;
+  width: 32px;
+  vertical-align: middle;
+  margin-right: 1rem; }
+
+.mini-projects__codepen-text {
+  font-size: 1.3rem;
+  line-height: 2.3rem;
+  font-weight: 350; }
+
+.more-projects {
+  margin-top: 4rem; }
+  .more-projects__text {
+    font-size: 1.3rem;
+    line-height: 2.3rem;
+    font-weight: 350;
+    text-align: center;
+    font-weight: 500;
+    font-size: 2rem; }
+
 .react-icon, .sass-icon, .node-icon, .pg-icon {
   height: 5rem; }
 
@@ -275,6 +311,9 @@ body {
   font-weight: 300;
   color: #b39f9f;
   margin: 0; }
+
+.collapse:focus {
+  color: #858585; }
 
 .active, .collapse:hover {
   background-color: #f5efec; }

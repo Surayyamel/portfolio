@@ -168,10 +168,35 @@
     &__text {
         @include info-text;
     }
+
+    &__codepen {
+        &-container {
+            margin-top: 3rem;
+        }
+
+        &-logo {
+            height: 32px;
+            width: 32px;
+            vertical-align: middle;
+            margin-right: 1rem;
+        }
+
+        &-text {
+           @include info-text;
+        }
+    }
 }
 
 
-
+.more-projects {
+    margin-top: 4rem;
+    &__text {
+        @include info-text;
+        text-align: center;
+        font-weight: 500;
+        font-size: 2rem;
+    }
+}
 
 
 /////////// ICONS ///////////
@@ -200,6 +225,10 @@
     text-align: center;
     @include sub-section-title;
     margin: 0;
+}
+
+.collapse:focus {
+    color: rgb(133, 133, 133);
 }
 
 .active, .collapse:hover {
