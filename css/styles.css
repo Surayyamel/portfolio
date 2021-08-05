@@ -11,6 +11,9 @@ body {
   box-sizing: border-box;
   margin: 3rem;
   color: #474444; }
+  @media only screen and (max-width: 61.25em) {
+    body {
+      margin: 0; } }
 
 .fade-in {
   opacity: 0;
@@ -42,12 +45,25 @@ body {
       display: inline-block;
       margin-bottom: 1rem;
       font-size: 4.5rem;
-      animation: fadeInUp 1s forwards; }
+      animation: fadeInUp 1s forwards;
+      white-space: nowrap; }
+      @media only screen and (max-width: 61.25em) {
+        .header__primary--main {
+          font-size: 3.5rem; } }
+      @media only screen and (max-width: 37.5em) {
+        .header__primary--main {
+          font-size: 2rem; } }
     .header__primary--sub {
       display: inline-block;
       font-size: 3rem;
       opacity: 0;
       animation: fadeInUp 1s .3s forwards; }
+      @media only screen and (max-width: 61.25em) {
+        .header__primary--sub {
+          font-size: 3rem; } }
+      @media only screen and (max-width: 37.5em) {
+        .header__primary--sub {
+          font-size: 1.8rem; } }
 
 .nav-bar {
   font-size: 2rem; }
@@ -62,6 +78,13 @@ body {
     margin: 2.5rem;
     font-size: 2.5rem;
     font-weight: bold; }
+    @media only screen and (max-width: 61.25em) {
+      .nav-bar__item1, .nav-bar__item2, .nav-bar__item3 {
+        font-size: 2rem;
+        white-space: nowrap; } }
+    @media only screen and (max-width: 37.5em) {
+      .nav-bar__item1, .nav-bar__item2, .nav-bar__item3 {
+        font-size: 1.5rem; } }
   .nav-bar__item1 {
     opacity: 0;
     animation: fadeInUp 1s .7s forwards; }
@@ -109,10 +132,17 @@ body {
   clip-path: circle(50% at 50% 50%);
   opacity: 0;
   animation: fadeInUp 1s forwards; }
+  @media only screen and (max-width: 61.25em) {
+    .photo-shape {
+      width: 10rem;
+      height: 10rem; } }
 
 .photo-pic {
   height: 100%;
   transform: translateX(3rem) translateY(3rem) scale(1.4); }
+  @media only screen and (max-width: 61.25em) {
+    .photo-pic {
+      transform: translateX(1.5rem) translateY(1.5rem) scale(1.4); } }
 
 @keyframes fadeInUp {
   from {
@@ -140,6 +170,9 @@ body {
 .project__container {
   display: flex;
   margin-bottom: 5rem; }
+  @media only screen and (max-width: 61.25em) {
+    .project__container {
+      display: block; } }
 
 .project__sub-title {
   font-size: 2rem;
@@ -155,7 +188,11 @@ body {
   font-weight: 350; }
 
 .project__info-container {
-  padding: 2rem 2rem; }
+  padding: 2rem 2rem;
+  width: 50%; }
+  @media only screen and (max-width: 61.25em) {
+    .project__info-container {
+      width: 100%; } }
 
 .project__tech-figure {
   margin: 2rem; }
@@ -197,29 +234,34 @@ body {
   flex-wrap: wrap; }
 
 .project-one__image1 {
-  width: 93%;
+  width: 95%;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  margin: 1rem; }
+  margin: 1rem;
+  object-fit: contain; }
 
 .project-one__image2 {
   width: 45%;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  margin: 1rem; }
+  margin: 1rem;
+  object-fit: contain; }
 
 .project-one__image3 {
   width: 45%;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  margin: 1rem; }
+  margin: 1rem;
+  object-fit: contain; }
 
 .project-two__images-container {
   display: flex;
-  max-width: 50%; }
+  max-width: 50%;
+  padding-left: 1rem; }
 
 .project-two__image1, .project-two__image2 {
-  width: 50%; }
+  width: 50%;
+  object-fit: contain; }
 
 .project-three__images-container {
-  max-width: 50%; }
+  width: 50%; }
 
 .project-three__image1 {
   width: 100%; }

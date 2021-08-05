@@ -15,19 +15,38 @@
         transform: translate(-50%, -50%);
         text-decoration: none;
         font-weight: 100;
-       
+      
 
         &--main {
             display: inline-block;
             margin-bottom: 1rem;
             font-size: 4.5rem;
             animation: fadeInUp 1s forwards;
+            white-space: nowrap;
+
+            @media only screen and (max-width: $medium){
+                font-size: 3.5rem;
+            }
+
+            @media only screen and (max-width: $small){
+                font-size: 2rem;
+            }
+
         }
         &--sub {
             display: inline-block;
             font-size: 3rem;
             opacity: 0;
             animation: fadeInUp 1s .3s forwards;
+
+            @media only screen and (max-width: $medium){
+                font-size: 3rem;
+            }
+
+            @media only screen and (max-width: $small){
+                font-size: 1.8rem;
+            }
+            
         }
     }
 }
@@ -49,6 +68,15 @@
         font-size: 2.5rem;
         font-weight: bold;
         
+        @media only screen and (max-width: $medium){
+            font-size: 2rem;
+            white-space: nowrap;
+        }
+
+        @media only screen and (max-width: $small){
+            font-size: 1.5rem;
+        }
+
     }
     &__item1 {
         opacity: 0;
@@ -97,11 +125,21 @@
     opacity: 0;
     animation: fadeInUp 1s forwards;
 
+    @media only screen and (max-width: $medium){
+        width: 10rem;
+        height: 10rem;
+    }
+
 }
 
 .photo-pic {
     height: 100%;
     transform: translateX(3rem) translateY(3rem) scale(1.4);
+
+    @media only screen and (max-width: $medium){
+        transform: translateX(1.5rem) translateY(1.5rem) scale(1.4);
+
+    }
 }
 
 @keyframes fadeInUp {

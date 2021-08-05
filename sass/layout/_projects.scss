@@ -29,6 +29,10 @@
     &__container {
         display: flex;
         margin-bottom: 5rem;
+
+        @media only screen and (max-width: $medium){
+            display: block;
+        }
     }
 
 
@@ -48,6 +52,11 @@
 
     &__info-container {
         padding: 2rem 2rem;
+        width: 50%;
+        
+        @media only screen and (max-width: $medium){
+            width: 100%;
+        }
     }
 
     &__tech-figure {
@@ -82,19 +91,22 @@
        
     }
     &__image1 {
-        width: 93%;
+        width: 95%;
         box-shadow: 0 .5rem 1rem rgba(black, .2);
         margin: 1rem;
+        object-fit: contain;
     }
     &__image2 {
         width: 45%;
         box-shadow: 0 .5rem 1rem rgba(black, .2);
         margin: 1rem;
+        object-fit: contain;
     }
     &__image3 {
         width: 45%;
         box-shadow: 0 .5rem 1rem rgba(black, .2);
         margin: 1rem;
+        object-fit: contain;
     }
 
     
@@ -105,17 +117,19 @@
     &__images-container {
         display: flex;
         max-width: 50%;
+        padding-left: 1rem
     }
 
     &__image1, &__image2 {
-        width: 50%; 
+        width: 50%;
+        object-fit: contain;
     }
 
 }
 
 .project-three {
     &__images-container {
-        max-width: 50%;
+        width: 50%;
     }
 
     &__image1 {

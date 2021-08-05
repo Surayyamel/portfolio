@@ -1,8 +1,13 @@
 $base-color: #fdf6f2;
 $main-font: "Lato", sans-serif;
 
-//'Open Sans', sans-serif;
-//rgb(250, 250, 234)
+$largest: 75em;    // 1200px / 16
+$large: 68.75em;   // 1100px
+$medium: 61.25em;  // 980px
+$small: 37.5em;    // 600px
+$smallest: 31.5em; // 500px
+
+
 * {
     margin: 0;
     padding: 0;
@@ -18,6 +23,10 @@ body {
     box-sizing: border-box;
     margin: 3rem;
     color:rgb(71, 68, 68);
+
+    @media only screen and (max-width: $medium){
+        margin: 0;
+    }
 }
 
 /////// animations //////// 
