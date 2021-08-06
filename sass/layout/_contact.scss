@@ -5,6 +5,19 @@
     display: flex;
     justify-content: space-evenly;
 
+
+    @media only screen and (max-width: $small){
+        display: block;
+        text-align: center;
+    }
+
+    @media only screen and (max-width: $smallest){
+        padding: 0 1rem 0rem 1rem;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    
 }
 
 .contact {
@@ -24,6 +37,12 @@
         margin-bottom: 2rem;
         margin-top: 1rem; 
         @include sub-section-title;
+    }
+
+    &__element {
+        @media only screen and (max-width: $small){
+            font-size: 1.4rem;
+        }
     }
 
     &__list {

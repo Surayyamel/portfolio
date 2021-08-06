@@ -29,7 +29,12 @@
             }
 
             @media only screen and (max-width: $small){
-                font-size: 2rem;
+                font-size: 3rem;
+            }
+
+
+            @media only screen and (max-width: $smallest){
+                font-size: 2.5rem;
             }
 
         }
@@ -77,6 +82,9 @@
             font-size: 1.5rem;
         }
 
+        @media only screen and (max-width: $smallest){
+            font-size: 1rem;
+        }
     }
     &__item1 {
         opacity: 0;
@@ -102,7 +110,7 @@
     width: 100vw;
     left: 0;
     z-index: 1;
-    top: -5%;
+    top: -6%;
     background-color:white;
 }
 
@@ -130,6 +138,10 @@
         height: 10rem;
     }
 
+    @media only screen and (max-width: $small){
+        margin: 5rem;
+    }
+
 }
 
 .photo-pic {
@@ -138,7 +150,6 @@
 
     @media only screen and (max-width: $medium){
         transform: translateX(1.5rem) translateY(1.5rem) scale(1.4);
-
     }
 }
 

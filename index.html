@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="/images/portfolio.png" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -80,12 +81,12 @@
                     <div class="project__about--container fade-in slide-in from-bottom">
                         <h2 class="project__sub-title">About the project</h2>
                         <p class="project__about--text">
-                            Keep track of your workouts, sets, reps and weights by saving them in this calendar based CRUD application!
+                            Keep track of your workouts, sets, reps and weights by saving them in this calendar based <b>CRUD</b> application!
                             <br /> 
-                            I aimed to create an alternatve to a paper-based notebook or notes app, specifically tailored to weights-tracking. I used the React library and Express framework with PostgreSQL as a database, opting for a structred approach. I used a Google OAuth log-in strategy to allow users to easily log-in with their Google account. 
+                            I aimed to create an alternatve to a paper-based notebook or notes app, specifically tailored to weights-tracking. I used the <b>React</b> library and <b>Express</b> framework alone with the <b>PostgreSQL</b> database. I used a <b>Google OAuth</b> log-in strategy to allow users to easily log-in with their Google account. 
                         </p>
                     </div>
-                    <div class="about-container fade-in slide-in from-bottom">
+                    <div class="project__about--container fade-in slide-in from-bottom">
                         <h2 class="project__sub-title">How it works</h2>
                             <p class="project__about--text">
                                 Log-in, select a date and complete the form that appears next to it. 
@@ -99,9 +100,18 @@
                             </div>
                     </div>
                 </div>
-
-                <!-- Expand section -->
             </div>
+
+            <h2 class="project__sub-title project__video-title fade-in slide-in from-bottom">Video example</h2>
+            <p class="project__about--text project__video-title fade-in slide-in from-bottom">
+                I have included a short video tutorial while the project is unavailable.
+            </p>
+            <div class="project__video-container fade-in slide-in from-bottom">
+                <iframe class="project__video-iframe" src="https://www.youtube.com/embed/IAdGIVpI6EI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+             <!-- Expand section -->
+
             <div class="project-one__expand-container fade-in slide-in from-bottom">
                 <button type="button" class="collapse">Expand for Workout Log case study</button>
                 <div class="collapse-content">
@@ -111,24 +121,20 @@
                             <th class="study-table__head">Solutions</th>
                         </tr>
                         <tr class="study-table__row">
-                            <td class="study-table__data">A <b>dynamic form</b> dependant on user input</td>
+                            <td class="study-table__data">A <b>dynamic form</b> that relies on user input</td>
                             <td class="study-table__data">Opted for using npm package 'react-hook-form', simplifying the dynamic aspect. </td>
                         </tr>
                         <tr class="study-table__row">
-                            <td class="study-table__data"><b>Storing</b> and <b>retrieving</b> the data (reps, weights) in the correct matching order</td>
-                            <td class="study-table__data">Assigned a specific index to each weight and rep names and ensured that the data gets inserted into DB in the correct order, so that it could be retrieved in order.</td>
+                            <td class="study-table__data"><b>Storing</b> and <b>retrieving</b> the data (reps, weights) in the correct matching order to be displayed in a table format.</td>
+                            <td class="study-table__data">Assigned a specific index to each weight and rep names and ensured that the data gets inserted into DB consistently in the correct order, so that it could be retrieved in order.</td>
                         </tr>
                         <tr class="study-table__row">
-                            <td class="study-table__data">Designing the <b>database</b> to ensure a link between the relevant users, dates, sets, reps and weights</td>
-                            <td class="study-table__data">Linked reps and weights to exercise using an exercise ID. Linked exercises and workout names to users using a user ID. Exercise and workout names also keep track of their selected date.</td>
+                            <td class="study-table__data">Designing the <b>database</b> to ensure a link between the relevant users, dates, sets, reps and weights and limit database calls.</td>
+                            <td class="study-table__data">Used Primary and Forein keys to create links between relevant data, and used table unions to retrieve data. </td>
                         </tr>
                         <tr class="study-table__row">
-                            <td class="study-table__data"><b>Hosting</b> on Heroku: OAuth log-in not working on hosted site</td>
-                            <td class="study-table__data">Was not able to freely exchange cookies between seperately hosted front-end and back-end. Added SameSite=None and Secure settings to cookie at creation.</td>
-                        </tr>
-                        <tr class="study-table__row">
-                            <td class="study-table__data"><b>Hosting</b> on Heroku: Database pooling not supported</td>
-                            <td class="study-table__data">Initially used pooling to handle database requests, but this was not supported by Heroku. Changed to connect and end connection on each CRUD route.</td>
+                            <td class="study-table__data"><b>Hosting</b> on Heroku: OAuth log-in and database pooling not working .</td>
+                            <td class="study-table__data">Was not able to freely exchange cookies between seperately hosted front-end and back-end. Added SameSite=None and Secure settings to cookie at creation. Initially used pooling to handle database requests, but this was not supported by Heroku. Changed to connect and end connection on each CRUD route.</td>
                         </tr>
                     </table>
 
@@ -172,7 +178,7 @@
                             <p class="project__about--text fade-in slide-in from-bottom">
                                 Enter a numeric value and pick currencies to convert!
                                 <br />
-                                This project uses the ExchangeRate-API for exchange rate data. Originally a front-end React app, I later created an Express server for security as the API could no longer be used without an API key. 
+                                This project uses the <b>ExchangeRate-API</b> for exchange rate data. Originally a front-end <b>React</b> app, I later created an <b>Express</b> server for security as the API could no longer be used without an <b>API key</b>. 
                                 <br />
                                 The request is sent to the server with the 'to' and 'from' country codes. The server then sends a request for the exchange rate, which is sent back to the front-end. The currency exchange is calculated on the front-end using the requested exchange rate.
                             </p>
@@ -217,7 +223,13 @@
                     <div class="project__about--container">
                         <h2 class="project__sub-title fade-in slide-in from-bottom">About the project</h2>
                         <p class="project__about--text fade-in slide-in from-bottom">
-                            Enter a location to search for the current weather!    
+                            Enter a location to search for the current weather! 
+                            <br />
+                            This Node.js app uses <b>Express</b> and <b>Handlebars</b> to create the views. 
+                            <br />
+                            There are two API calls - the <b>Mapbox API</b> does the geocoding, converting location text into geographic coordinates, and the <b>Weatherstack API</b> uses latitudes and longitudes to get the weather data.
+                            <br />
+                            Depending on the weather result keywords, a different animated <b>SVG</b> image will appear (sunny, cloudy or rainy).
                         </p>
 
                         <div class="project__links--container fade-in slide-in from-bottom">
@@ -237,7 +249,7 @@
             <a href="https://codepen.io/SurayyaM/full/dyGzeGd" target="_blank" class="mini-projects__link">
                 <div class="mini-projects__card fade-in slide-in from-bottom">
                     <div class="mini-projects__image-container">
-                        <img src="/images/login_form.png" alt="" class="mini-projects__image">
+                        <img src="/images/login_form.png" alt="Picture of log-in form project" class="mini-projects__image">
                     </div>
                     <div class="mini-projects__about-container">
                         <h2 class="mini-projects__title">Animated log-in form</h2>
@@ -256,7 +268,7 @@
             <a href="https://codepen.io/SurayyaM/full/MWKpPaL" target="_blank" class="mini-projects__link">
                 <div class="mini-projects__card fade-in slide-in from-bottom">
                     <div class="mini-projects__image-container">
-                        <img src="/images/slot_machine.png" alt="" class="mini-projects__image">
+                        <img src="/images/slot_machine.png" alt="Picture of slot machine project" class="mini-projects__image">
                     </div>
                     <div class="mini-projects__about-container">
                         <h2 class="mini-projects__title">Slot machine</h2>
@@ -274,7 +286,7 @@
             <a href="https://codepen.io/SurayyaM/full/WNrROzG" target="_blank" class="mini-projects__link">
                 <div class="mini-projects__card fade-in slide-in from-bottom">
                     <div class="mini-projects__image-container">
-                        <img src="/images/guess_number.png" alt="" class="mini-projects__image">
+                        <img src="/images/guess_number.png" alt="Picture of guess the number project" class="mini-projects__image">
                     </div>
                     <div class="mini-projects__about-container">
                         <h2 class="mini-projects__title">Guess the number</h2>
@@ -292,7 +304,7 @@
             <a href="https://codepen.io/SurayyaM/full/OJMbeOy" target="_blank" class="mini-projects__link">
                 <div class="mini-projects__card fade-in slide-in from-bottom">
                     <div class="mini-projects__image-container">
-                        <img src="/images/temperature_converter.png" alt="" class="mini-projects__image">
+                        <img src="/images/temperature_converter.png" alt="Picture of temperature converter project" class="mini-projects__image">
                     </div>
                     <div class="mini-projects__about-container">
                         <h2 class="mini-projects__title">Temperature converter</h2>
@@ -310,9 +322,9 @@
         </div>
 
 
-        <div class="more-projects">
+        <div class="more-projects fade-in slide-in from-bottom">
             <p class="more-projects__text">
-                Portfolio code: <a href="https://github.com/Surayyamel" target="_blank" class="contact__link">GitHub</a>
+                View the full <a href="https://github.com/Surayyamel" target="_blank" class="contact__link">portfolio code</a>
                 <br />
                 Find more code examples and projects completed as part of courses on my <a href="https://github.com/Surayyamel" target="_blank" class="contact__link">GitHub page</a>!
             </p>
@@ -326,15 +338,11 @@
     <section class="about fade-in slide-in from-bottom" id="about">
         <div class="about__container">
             <h1 class="about__title">About me</h1>
-            <p class="about__text">My name is Surayya. Originally from England, I grew up and studied in the South of France. Emigrating at a young age really sparked my interest in travelling and learning languages. I graduated school with a Baccalauréat (A Levels equivalent) in Languages and Litterature. I went on to study Applied Languages at University where I had in depth French, English and German language and translation studies, applied to Business and specialised in International Commerce.
-                I then took some time out and moved back to England, still deciding on whether to persue a Master's in International Commerce. 
-                I took up a job in retail, thinking about my next steps.
+            <p class="about__text">Hello! My name is Surayya Fenton. Originally from England, I grew up and studied in the South of France.
+                I discovered my passion for web development after I graduated from University in Applied Languages (French, English and German studies applied to Business and specialised in International Commerce) and moved back to England.
+                I have since been self studying using online courses, books, Google and some trial and error!
                 <br />
-                This is when I discovered Web Development. I was hooked from the very first lines of code I wrote on FreeCodeCamp and after over a year of self-learning, I am even more passionate about it!
-                <br />
-                I find that coding incorporates everything I enjoy about learning languages, while also being creative, facing challenges, endless learning, 
-                <br />
-                I find problem solving exciting, and I am thrilled to keep learning new things! 
+                I am excited to continue to learn new things and face new challenges as I look for my first developer role.
             </p>
 
         </div>
@@ -347,17 +355,17 @@
     <section class="contact fade-in slide-in from-bottom" id="contact">
         <h1 class="contact__title">Contact</h1>
             <div class="contact-container">
-                <div class=contact-details>
+                <div class=contact__details>
                     <h3 class="contact__sub-title">Contact details</h3>
                     <ul class="contact__list">
-                        <li class="contact__element"><img src="/images/phone.png" alt="Phone icon" class="contact-icon">0734970972342</li>
-                        <li class="contact__element"><img src="/images/email.png" alt="Email icon" class="contact-icon"> email@email.com</li>
+                        <li class="contact__element"><img src="/images/phone.png" alt="Phone icon" class="contact-icon">enter phone number</li>
+                        <li class="contact__element"><img src="/images/email.png" alt="Email icon" class="contact-icon">surayyamelodyfenton@outlook.fr</li>
                     </ul>
                 </div>
                 <div class="contact-online">
                     <h3 class="contact__sub-title">Find me online</h3>
                     <ul class="contact__list">
-                        <li class="contact__element"><a href="https://www.google.com" target="_blank"><img src="/images/linkedin.png" alt="LinkedIn Logo" class="contact-icon"></a><a href="https://www.google.com" target="_blank" class="contact__link">LinkedIn</a></li>
+                        <li class="contact__element"><a href="www.linkedin.com/in/surayya-fenton-2937591b8" target="_blank"><img src="/images/linkedin.png" alt="LinkedIn Logo" class="contact-icon"></a><a href="https://www.linkedin.com/in/surayya-fenton-2937591b8/?originalSubdomain=uk" target="_blank" class="contact__link">LinkedIn</a></li>
                         <li class="contact__element"><a href="https://github.com/Surayyamel" target="_blank"><img src="/images/github.png" alt="GitHub Logo" class="contact-icon"></a><a href="https://github.com/Surayyamel" target="_blank" class="contact__link">GitHub</a></li>
                         <li class="contact__element"><a href="https://twitter.com/SurayyaFenton" target="_blank"><img src="/images/twitter.png" alt="Twitter Logo" class="contact-icon"></a><a href="https://twitter.com/SurayyaFenton" target="_blank" class="contact__link">Twitter</a></li>
                     </ul>

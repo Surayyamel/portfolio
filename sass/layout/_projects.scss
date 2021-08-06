@@ -24,6 +24,11 @@
         text-transform: uppercase;
         font-weight: 300;
         color: rgb(179, 159, 159);
+
+        @media only screen and (max-width: $medium){
+            text-align: center;
+        }
+
     }
 
     &__container {
@@ -38,14 +43,27 @@
 
     &__sub-title {
         @include sub-section-title;
+
+        @media only screen and (max-width: $medium){
+            text-align: center;
+        }
     }
 
     &__about {
         &--container {
 
+            @media only screen and (max-width: $medium){
+                padding: 0 10rem;
+            }
+
+            @media only screen and (max-width: $small){
+                padding: 0 5rem;
+            }
+
         }
         
         &--text {
+            text-align:justify;
             @include info-text;
         }
     }
@@ -53,9 +71,13 @@
     &__info-container {
         padding: 2rem 2rem;
         width: 50%;
-        
+
         @media only screen and (max-width: $medium){
             width: 100%;
+        }
+
+        @media only screen and (max-width: $medium){
+           padding: 0;
         }
     }
 
@@ -65,11 +87,22 @@
 
     &__figure-list {
         display: flex;
+
+        @media only screen and (max-width: $medium){
+            justify-content: center;
+        }
+
     }
 
     &__links {
+        
         &--container {
             margin-top: 3rem;
+
+            @media only screen and (max-width: $medium){
+                text-align: center;
+            }
+
         }
         &--text {
             @include info-text;
@@ -80,6 +113,25 @@
             @include small-link;
          }
     }
+
+    &__video-container {
+        text-align: center;
+        margin: 2rem;
+    }
+
+    &__video-title {
+        text-align: center;
+    }
+
+    &__video-iframe {
+        width: 56rem; 
+        height: 31.5rem;
+
+        @media only screen and (max-width: $small){
+            width: 28rem; 
+            height: 15.75rem;
+        }
+    }
 }
 
 
@@ -89,24 +141,40 @@
        display: flex;
        flex-wrap: wrap;
        
+       @media only screen and (max-width: $medium){
+            max-width: 80%;
+            margin-left: 13%
+        }
     }
     &__image1 {
         width: 95%;
         box-shadow: 0 .5rem 1rem rgba(black, .2);
         margin: 1rem;
         object-fit: contain;
+
+        @media only screen and (max-width: $small){
+            width: 86%;
+        }
     }
     &__image2 {
         width: 45%;
         box-shadow: 0 .5rem 1rem rgba(black, .2);
         margin: 1rem;
         object-fit: contain;
+
+        @media only screen and (max-width: $small){
+           width: 40.5%;
+        }
     }
     &__image3 {
         width: 45%;
         box-shadow: 0 .5rem 1rem rgba(black, .2);
         margin: 1rem;
         object-fit: contain;
+
+        @media only screen and (max-width: $small){
+            width: 40.5%;
+        }
     }
 
     
@@ -117,7 +185,12 @@
     &__images-container {
         display: flex;
         max-width: 50%;
-        padding-left: 1rem
+        padding-left: 1rem;
+
+        @media only screen and (max-width: $medium){
+            max-width: 80%;
+            margin: 0 auto;
+        }
     }
 
     &__image1, &__image2 {
@@ -130,6 +203,11 @@
 .project-three {
     &__images-container {
         width: 50%;
+
+        @media only screen and (max-width: $medium){
+            width: 80%;
+            margin: 0 auto;
+        }
     }
 
     &__image1 {
@@ -148,6 +226,16 @@
         box-shadow: 0 .5rem 1rem rgba(rgb(201, 195, 195), .2);
         margin-bottom: 2rem;
 
+        @media only screen and (max-width: $medium){
+            margin: 0 auto;
+            margin-bottom: 1.5rem;
+        }
+
+        @media only screen and (max-width: $small){
+            display: block;
+        }
+
+
         &:hover {
             cursor: pointer;
             transform: translateY(-1rem);
@@ -158,6 +246,12 @@
     &__image-container {
        width: 15rem;
        height: 15rem;
+
+        @media only screen and (max-width: $small){
+            width: 100%;
+            height: 100%;
+            padding: 2rem;
+        }
     }
 
     &__image {
@@ -172,6 +266,11 @@
 
     &__about-container {
         padding: 0 2rem;
+        width: 60%;
+
+        @media only screen and (max-width: $small){
+           width: 100%;
+        }
     }
 
     &__title {
@@ -193,10 +292,22 @@
             width: 32px;
             vertical-align: middle;
             margin-right: 1rem;
+
+
+            @media only screen and (max-width: $small){
+                height: 16px;
+                width: 16px;
+            }
         }
 
         &-text {
-           @include info-text;
+            @include info-text;
+
+            @media only screen and (max-width: $small){
+                font-size: 1rem;
+
+            }
+           
         }
     }
 }
@@ -204,10 +315,15 @@
 
 .more-projects {
     margin-top: 4rem;
+
+    @media only screen and (max-width: $medium){
+        padding: 0 4rem;
+    }
+
     &__text {
         @include info-text;
         text-align: center;
-        font-weight: 500;
+        font-weight: 350;
         font-size: 2rem;
     }
 }
@@ -216,11 +332,15 @@
 /////////// ICONS ///////////
 @mixin icon-format {
     height: 5rem;
-   
+
+    @media only screen and (max-width: $small){
+        height: 3rem;
+    }
 }
 
 .react-icon, .sass-icon, .node-icon, .pg-icon {
    @include icon-format;
+
 }
 
 /////////// EXPAND / COLLAPSE SECTION //////////
