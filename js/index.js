@@ -69,11 +69,7 @@ const navList = document.querySelector('.nav-bar__list');
 const navLink = document.querySelectorAll('.nav-bar__link');
 const navTop = navList.offsetTop;
 
-console.log(navLink)
-
 const stickyNav = () => {
-    console.log(window.scrollY)
-    console.log(navTop)
     if (window.scrollY >= navTop) {
         nav.classList.add('nav-bar-fixed');
         navLink.forEach(link => link.classList.add('nav-bar__link-fixed'));
