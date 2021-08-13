@@ -24,6 +24,8 @@
         text-transform: uppercase;
         font-weight: 300;
         color: rgb(179, 159, 159);
+        padding-top: 2rem;
+        text-align: center;
 
         @media only screen and (max-width: $medium){
             text-align: center;
@@ -117,6 +119,7 @@
     &__video-container {
         text-align: center;
         margin: 2rem;
+        margin-bottom: 4rem;
     }
 
     &__video-title {
@@ -136,6 +139,7 @@
 
 
 .project-one {
+    background-color: $base-color;
     &__images-container {
        max-width: 50%;
        display: flex;
@@ -201,6 +205,7 @@
 }
 
 .project-three {
+    background-color: $base-color;
     &__images-container {
         width: 50%;
 
@@ -346,7 +351,7 @@
 /////////// EXPAND / COLLAPSE SECTION //////////
 
 .collapse {
-    background-color: $base-color;
+    background-color: #f0ebe8;
     color: #444;
     cursor: pointer;
     padding: 18px;
@@ -359,6 +364,7 @@
     text-align: center;
     @include sub-section-title;
     margin: 0;
+    
 }
 
 .collapse:focus {
