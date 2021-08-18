@@ -378,7 +378,7 @@
 .collapse-content {
     padding: 0 18px;
     display: none;
-    overflow: hidden;
+    overflow: scroll;
     background-color: #f8f6f6;
     max-height: 0;
     transition: max-height 0.2s ease-out;
@@ -396,6 +396,9 @@
     float: right;
 }
 
+.thoughts-container {
+    padding: .5rem 5rem 5rem 5rem;
+}
 //////////// CASE STUDY TABLE ///////////
 
 .study-table {

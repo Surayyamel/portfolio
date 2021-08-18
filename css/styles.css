@@ -464,7 +464,7 @@ body {
 .collapse-content {
   padding: 0 18px;
   display: none;
-  overflow: hidden;
+  overflow: scroll;
   background-color: #f8f6f6;
   max-height: 0;
   transition: max-height 0.2s ease-out;
@@ -479,6 +479,9 @@ body {
 .active::after {
   content: "\2796";
   float: right; }
+
+.thoughts-container {
+  padding: .5rem 5rem 5rem 5rem; }
 
 .study-table {
   position: relative;

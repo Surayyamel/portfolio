@@ -140,6 +140,10 @@
                             <th class="study-table__head">Solutions</th>
                         </tr>
                         <tr class="study-table__row">
+                            <td class="study-table__data"><b>Security</b></td>
+                            <td class="study-table__data">Used express-rate-limit package in authentication route to limit requests. Used validator.js package for user input validation and sanitization. Disabled X-Powered-By header.</td>
+                        </tr>
+                        <tr class="study-table__row">
                             <td class="study-table__data">A <b>dynamic form</b> that relies on user input</td>
                             <td class="study-table__data">Opted for using npm package 'react-hook-form', simplifying the dynamic aspect. </td>
                         </tr>
@@ -156,7 +160,24 @@
                             <td class="study-table__data">Was not able to freely exchange cookies between seperately hosted front-end and back-end. Added SameSite=None and Secure settings to cookie at creation. Initially used pooling to handle database requests, but this was not supported by Heroku. Changed to connect and end connection on each CRUD route.</td>
                         </tr>
                     </table>
-
+                    <div class="thoughts-container">
+                        <h2 class="project__sub-title">Thoughts and improvements</h2>
+                        <p class="project__about--text">
+                        While this project is functioning on all other browsers, it has been marked as deceptive by Google Chrome, so I am delving deeping into App Security to figure out the reason, and to find any security holes in my project. (I have currently taken the project offline)
+                        <br />
+                        After asking for user feedback, I realised that some functionalities that made sense to me, were confusing to others. I am thinking of adding more user guidence. The seperate 'workout name' and 'exercise' form could lead to confusion, as they appear simultaneously.
+                        <br />
+                        I would like to add another log-in option for users that may not want to use a Google account. I will need to find a way to integrate these users into the database and edit the database accordingly. I would also need to store and encrypt user passwords.
+                        <br />
+                        I learned a lot while making this project as it is my first full-stack project. Some things I learned are:
+                        <ul>
+                            <li>Plan thoroughly - spending more time at the beginning will save me time in the end</li>
+                            <li>"This works" - make sure it is a solution that will hold up and is not just a temporary fix</li>
+                            <li>Establish design patterns before starting to write to ensure consistency (React Components, CSS classes, naming variables etc)</li>
+                            <li>Keep notes of errors and how to fix them for future reference</li>
+                        </ul>
+                    </p>
+                    </div>
                 </div>
 
            </div>
