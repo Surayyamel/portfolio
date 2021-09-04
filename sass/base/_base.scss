@@ -1,4 +1,7 @@
-$base-color: #fdf6f2;
+$base-color: #fffbf9;
+$section-title: rgb(156, 135, 135);
+$sub-title: rgb(110, 86, 86);
+
 $main-font: "Lato", sans-serif;
 
 $largest: 75em;    // 1200px / 16
@@ -8,6 +11,7 @@ $medium: 61.25em;  // 980px
 $small: 37.5em;    // 600px => OR 500px?
 
 $smallest: 25em; // 400px
+
 
 
 * {
@@ -59,7 +63,7 @@ body {
     &:link,
     &:visited {
         text-decoration: none;
-        color: rgb(179, 159, 159);
+        color: $sub-title;
         border-bottom: 1.5px solid rgb(204, 178, 178);
         display: inline-block;
         padding: .2rem .3rem;
@@ -81,6 +85,17 @@ body {
     
 }
 
+///// TITLE MIXINS //////
+
+@mixin section-title {
+    font-size: 4rem;
+    margin: 8rem 2rem 7rem 2rem;
+    padding-top: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: $section-title;
+}
 
 @mixin sub-section-title {
     font-size: 2rem;
@@ -88,5 +103,5 @@ body {
     margin-top: 3rem;
     text-transform: uppercase;
     font-weight: 300;
-    color: rgb(179, 159, 159);
+    color: $sub-title;
 }

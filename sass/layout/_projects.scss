@@ -7,13 +7,7 @@
 
 
 .section-projects-title {
-    font-size: 4rem;
-    margin: 8rem 2rem 7rem 2rem;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 300;
-    color: rgb(179, 159, 159);
-   
+    @include section-title;  
 }
 
 
@@ -23,7 +17,7 @@
         margin: 5rem 2rem;
         text-transform: uppercase;
         font-weight: 300;
-        color: rgb(179, 159, 159);
+        color: $sub-title;
         padding-top: 2rem;
         text-align: center;
 

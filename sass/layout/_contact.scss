@@ -23,13 +23,7 @@
 .contact {
     margin-bottom: 10rem;
     &__title {
-        font-size: 4rem;
-        margin: 8rem 2rem 7rem 2rem;
-        padding-top: 2rem;
-        text-align: center;
-        text-transform: uppercase;
-        font-weight: 300;
-        color: rgb(179, 159, 159);
+       @include section-title;
     }
 
     &__sub-title {
