@@ -16,6 +16,7 @@
     rel="stylesheet"/>
     <title>Surayya Fenton's Portfolio</title>
 </head>
+
 <body>
     <header class="header">
         <div class="header__photo-container">
@@ -39,6 +40,7 @@
         </nav>
     </header>
 
+<main class="main">
 
     <!-- Section About -->
 
@@ -135,30 +137,35 @@
                 <button type="button" class="collapse">Expand for Workout Log case study</button>
                 <div class="collapse-content">
                     <table class="study-table">
-                        <tr class="study-table__row">
-                            <th class="study-table__head">Difficulties encountered</th>
-                            <th class="study-table__head">Solutions</th>
-                        </tr>
-                        <tr class="study-table__row">
-                            <td class="study-table__data"><b>Security</b></td>
-                            <td class="study-table__data">Used express-rate-limit package in authentication route to limit requests. Used validator.js package for user input validation and sanitization. Disabled X-Powered-By header.</td>
-                        </tr>
-                        <tr class="study-table__row">
-                            <td class="study-table__data">A <b>dynamic form</b> that relies on user input</td>
-                            <td class="study-table__data">Opted for using npm package 'react-hook-form', simplifying the dynamic aspect. </td>
-                        </tr>
-                        <tr class="study-table__row">
-                            <td class="study-table__data"><b>Storing</b> and <b>retrieving</b> the data (reps, weights) in the correct matching order to be displayed in a table format.</td>
-                            <td class="study-table__data">Assigned a specific index to each weight and rep names and ensured that the data gets inserted into DB consistently in the correct order, so that it could be retrieved in order.</td>
-                        </tr>
-                        <tr class="study-table__row">
-                            <td class="study-table__data">Designing the <b>database</b> to ensure a link between the relevant users, dates, sets, reps and weights and limit database calls.</td>
-                            <td class="study-table__data">Used Primary and Forein keys to create links between relevant data, and used table unions to retrieve data. </td>
-                        </tr>
-                        <tr class="study-table__row">
-                            <td class="study-table__data"><b>Hosting</b> on Heroku: OAuth log-in and database pooling not working .</td>
-                            <td class="study-table__data">Was not able to freely exchange cookies between seperately hosted front-end and back-end. Added SameSite=None and Secure settings to cookie at creation. Initially used pooling to handle database requests, but this was not supported by Heroku. Changed to connect and end connection on each CRUD route.</td>
-                        </tr>
+                        <thead class="study-table__head">
+                            <tr class="study-table__row">
+                                <th class="study-table__head">Difficulties encountered</th>
+                                <th class="study-table__head">Solutions</th>
+                            </tr>
+                        </thead>
+                        <tbody class="study-table__body">
+                            <tr class="study-table__row">
+                                <td class="study-table__data"><b>Security</b></td>
+                                <td class="study-table__data">Used express-rate-limit package in authentication route to limit requests. Used validator.js package for user input validation and sanitization. Disabled X-Powered-By header.</td>
+                            </tr>
+                            <tr class="study-table__row">
+                                <td class="study-table__data">A <b>dynamic form</b> that relies on user input</td>
+                                <td class="study-table__data">Opted for using npm package 'react-hook-form', simplifying the dynamic aspect. </td>
+                            </tr>
+                            <tr class="study-table__row">
+                                <td class="study-table__data"><b>Storing</b> and <b>retrieving</b> the data (reps, weights) in the correct matching order to be displayed in a table format.</td>
+                                <td class="study-table__data">Assigned a specific index to each weight and rep names and ensured that the data gets inserted into DB consistently in the correct order, so that it could be retrieved in order.</td>
+                            </tr>
+                            <tr class="study-table__row">
+                                <td class="study-table__data">Designing the <b>database</b> to ensure a link between the relevant users, dates, sets, reps and weights and limit database calls.</td>
+                                <td class="study-table__data">Used Primary and Forein keys to create links between relevant data, and used table unions to retrieve data. </td>
+                            </tr>
+                            <tr class="study-table__row">
+                                <td class="study-table__data"><b>Hosting</b> on Heroku: OAuth log-in and database pooling not working .</td>
+                                <td class="study-table__data">Was not able to freely exchange cookies between seperately hosted front-end and back-end. Added SameSite=None and Secure settings to cookie at creation. Initially used pooling to handle database requests, but this was not supported by Heroku. Changed to connect and end connection on each CRUD route.</td>
+                            </tr>
+                        </tbody>
+                        
                     </table>
                     <div class="thoughts-container">
                         <h2 class="project__sub-title">Thoughts and improvements</h2>
@@ -399,6 +406,8 @@
             </div>
         
     </section>
+
+</main>
 
     <script src="/js/index.js"></script>
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
